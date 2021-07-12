@@ -1,14 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.ateneaApp.customviews.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_category_home_llContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CategoryListFragment">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <com.ateneaApp.customviews.CustomEdittext
+                android:id="@+id/fragment_home_etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_3sdp"
+                android:background="@drawable/search_box"
+                android:drawableEnd="@mipmap/ic_search_audio"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableStart="@mipmap/ic_search"
+                android:gravity="left|center_vertical|center_horizontal|center|start"
+                android:hint="@string/search_hint"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:textColorHint="@color/search_bg_hint_clor"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="visible"
+                app:font_name="Poppins-Light.otf"
+                android:drawableRight="@mipmap/ic_search_audio"
+                android:drawableLeft="@mipmap/ic_search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <LinearLayout
+                android:id="@+id/dailog_add_pincode_rlCurrentLocation"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_pin_bg"
+                android:gravity="center"
+                android:layout_alignParentRight="true">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/fragment_home_tvPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableStart="@mipmap/ic_map_pin"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="382481"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_name="Poppins-Regular.otf"
+                    android:drawableLeft="@mipmap/ic_map_pin" />
+            </LinearLayout>
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/tvFashion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="@string/categories"
+                android:textAllCaps="false"
+                android:textColor="@color/fashion_txt_color"
+                android:textSize="@dimen/_22sdp"
+                app:font_name="Poppins-Bold.otf"
+                android:layout_marginLeft="@dimen/_3sdp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_category_home_rvWishlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_2sdp" />
+</com.ateneaApp.customviews.SlidingLinearLayout>

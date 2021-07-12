@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="array_dot_active">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>#eaeaea</item>
+        <item>#eaeaea</item>
+        <item>#eaeaea</item>
+    </array>
+    <array name="category">
+        <item>Feed</item>
+        <item>Categories</item>
+        <item>Your Bag</item>
+        <item>Account</item>
+    </array>
+    <array name="sub_category">
+        <item>Featured</item>
+        <item>Ethnic Wear</item>
+        <item>Wenstern Wear</item>
+        <item>Fusion Wear</item>
+    </array>
+</resources>

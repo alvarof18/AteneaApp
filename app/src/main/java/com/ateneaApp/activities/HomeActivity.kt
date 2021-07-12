@@ -2,13 +2,12 @@ package com.ateneaApp.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import com.ateneaApp.R
 import com.ateneaApp.fragments.HomeFragment
 
 
 class HomeActivity : AppCompatActivity() {
-    private val mainFragment: HomeFragment? = null
+    private val homeFragment = HomeFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +16,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun initView(){
-        val ft: FragmentTransaction
-        
-
+      supportFragmentManager.beginTransaction()
+          .replace(R.id.flcontainer,homeFragment)
+          .commit()
     }
 }

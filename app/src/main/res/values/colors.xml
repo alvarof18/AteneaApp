@@ -15,4 +15,8 @@
     <color name="search_bg_hint_clor">#7ab5b5</color>
     <color name="pin_select_bgcolor">#3ccfcf</color>
     <color name="fashion_txt_color_70">#b3083030</color>
+    <color name="row_view">#d7d7d7</color>
+    <color name="colorBlack">#000000</color>
+    <color name="tab_selected_color">#97c2c2</color>
+    <color name="colorPrimary">#eaf5f5</color>
 </resources>

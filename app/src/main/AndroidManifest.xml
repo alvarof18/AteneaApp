@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AteneaApp">
 
         <activity
-            android:name=".activities.WelcomeActivity"
+            android:name=".activities.HomeActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.LoginSingUpActivity" />
-        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.BaseActivity" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.SplashActivity"/>

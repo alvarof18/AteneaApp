@@ -13,6 +13,11 @@ import com.ateneaApp.databinding.ActivitySplashBinding
 * si el usuario esta logeado se debe redirigir a la pantalla principal de la apliacion
 * Sino despues de la pantalla de ir a la pagina de Login or Sing Up y luego de eso ir a la pantalla de Bienvenida y despues a la principal de la aplicacion
 * */
+
+/*
+Falta Validar en el shared preferences si ya se mostro el welcome una vez
+
+ */
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var bindingSplash: ActivitySplashBinding

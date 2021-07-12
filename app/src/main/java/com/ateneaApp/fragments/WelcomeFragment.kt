@@ -48,6 +48,7 @@ class WelcomeFragment : Fragment() {
         }
 
         buttonView.setOnClickListener { View ->
+            // Antes de invocar el activity guardar en el Share Preferences para no mostrar otra vez el welcome
         activity?.startActivity(intent)
         }
     }

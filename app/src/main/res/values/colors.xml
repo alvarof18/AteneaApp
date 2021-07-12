@@ -11,4 +11,8 @@
     <color name="fashion_txt_color">#083030</color>
     <color name="cartlist_checkount_color_50">#80e9427b</color>
     <color name="prolist_line">#c3dadf</color>
+    <color name="search_bg">#d7ecec</color>
+    <color name="search_bg_hint_clor">#7ab5b5</color>
+    <color name="pin_select_bgcolor">#3ccfcf</color>
+    <color name="fashion_txt_color_70">#b3083030</color>
 </resources>

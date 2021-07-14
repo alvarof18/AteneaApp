@@ -16,13 +16,13 @@ class HomeFragment : BaseFragment() {
 
     private var tlMainCategory: TabLayout? = null
 
-    private lateinit var activityf:Activity
+    private lateinit var activityf: Activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
 
-         }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,7 +38,7 @@ class HomeFragment : BaseFragment() {
     override fun initComponents(view: View?) {
         tlMainCategory = view?.findViewById(R.id.fragment_home_tlHome) as TabLayout
         setupTabIcons()
-        openFragment(FeedHomeFragment())
+        openFragment(0)
     }
 
     private fun setupTabIcons() {
@@ -69,47 +69,38 @@ class HomeFragment : BaseFragment() {
         tlMainCategory!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                when (tab?.position) {
-                    0 -> {
-                        HomeFragment().openFragment(FeedHomeFragment())
-                    }
-                    1 -> {
-                          HomeFragment().openFragment(CategoryListFragment())
-                    }
-                    2 -> {
-                        HomeFragment().openFragment(CartListFragment())
-                    }
-                    3 -> {
-                       HomeFragment().openFragment(MyAccountFragment())
-                    }
-
-                }
-
+               openFragment(tab!!.position)
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
 
             }
+
             override fun onTabReselected(tab: TabLayout.Tab?) {
 
             }
 
         })
     }
-    private fun openFragment(fragment: Fragment) {
 
-
-
-        /*
-        val beginTransaction = fragmentManager?.beginTransaction()
-        beginTransaction!!.replace(R.id.fragment_home_flHome,fragment)
-        beginTransaction.commit()
-
-
-        val transaccion = requireActivity()..beginTransaction()
-        transaccion.replace(R.id.fragment_home_flHome,fragment)
-        transaccion.commit()
-*/
+    private fun openFragment(numerFragment: Int) {
+        val transaccion = requireActivity().supportFragmentManager.beginTransaction()
+        when (numerFragment) {
+            0 -> {
+                transaccion.replace(R.id.fragment_home_flHome,FeedHomeFragment())
+                transaccion.commit()
+            }
+            1 -> {
+                transaccion.replace(R.id.fragment_home_flHome,CategoryListFragment())
+                transaccion.commit()
+            }/*
+            2 -> {
+                HomeFragment().openFragment(CartListFragment())
+            }
+            3 -> {
+                HomeFragment().openFragment(MyAccountFragment())
+            }*/
+        }
     }
 }
 

@@ -14,4 +14,16 @@
     <string name="new_arriaval">New Arrival</string>
     <string name="categories">Categories</string>
 
+    <!-- Data Test -->
+
+    <string name="cat_a">Women</string>
+    <string name="cat_b">Men</string>
+    <string name="cat_c">Kids</string>
+    <string name="cat_d">Home &amp; Living</string>
+    <string name="cat_e">Gadgets</string>
+
+    <string name="sub_a">Clothing Style</string>
+    <string name="sub_b">Foot wear</string>
+    <string name="sub_c">Accessories</string>
+
 </resources>

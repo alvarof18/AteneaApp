@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ateneaApp.customviews.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.ateneaApp.customviews.SlidingLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_category_home_llContainer"
@@ -39,7 +40,7 @@
                 android:textColorHint="@color/search_bg_hint_clor"
                 android:textSize="@dimen/_11sdp"
                 android:visibility="visible"
-                app:font_name="Poppins-Light.otf"
+                app:font_name="poppins_light.otf"
                 android:drawableRight="@mipmap/ic_search_audio"
                 android:drawableLeft="@mipmap/ic_search" />
         </RelativeLayout>
@@ -76,7 +77,7 @@
                     android:text="382481"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_12sdp"
-                    app:font_name="Poppins-Regular.otf"
+                    app:font_name="poppins_regular.otf"
                     android:drawableLeft="@mipmap/ic_map_pin" />
             </LinearLayout>
 
@@ -91,7 +92,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/fashion_txt_color"
                 android:textSize="@dimen/_22sdp"
-                app:font_name="Poppins-Bold.otf"
+                app:font_name="poppins_bold.otf"
                 android:layout_marginLeft="@dimen/_3sdp" />
         </RelativeLayout>
     </LinearLayout>

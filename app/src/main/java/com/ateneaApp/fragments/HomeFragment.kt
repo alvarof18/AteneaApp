@@ -5,19 +5,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.ateneaApp.R
 import com.google.android.material.tabs.TabLayout
 
 
 class HomeFragment : BaseFragment() {
-    private val activity: Activity? = null
+
     private var tlMainCategory: TabLayout? = null
+
+    private lateinit var activityf:Activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-    }
+
+         }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -69,7 +74,7 @@ class HomeFragment : BaseFragment() {
                         HomeFragment().openFragment(FeedHomeFragment())
                     }
                     1 -> {
-                        HomeFragment().openFragment(CategoryListFragment())
+                          HomeFragment().openFragment(CategoryListFragment())
                     }
                     2 -> {
                         HomeFragment().openFragment(CartListFragment())
@@ -81,18 +86,30 @@ class HomeFragment : BaseFragment() {
                 }
 
             }
+
             override fun onTabUnselected(tab: TabLayout.Tab?) {
 
             }
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
+
             }
 
         })
     }
     private fun openFragment(fragment: Fragment) {
-        getActivity()?.supportFragmentManager?.beginTransaction()
-            ?.replace(R.id.fragment_home_flHome, fragment)
+
+
+
+        /*
+        val beginTransaction = fragmentManager?.beginTransaction()
+        beginTransaction!!.replace(R.id.fragment_home_flHome,fragment)
+        beginTransaction.commit()
+
+
+        val transaccion = requireActivity()..beginTransaction()
+        transaccion.replace(R.id.fragment_home_flHome,fragment)
+        transaccion.commit()
+*/
     }
 }
 

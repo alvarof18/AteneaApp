@@ -180,7 +180,7 @@
           </RelativeLayout>
 
           <androidx.recyclerview.widget.RecyclerView
-              android:id="@+id/fragment_home_rvNewArriaval"
+              android:id="@+id/fragment_home_rvTrending"
               android:layout_width="match_parent"
               android:layout_height="@dimen/_150sdp"
               android:layout_marginBottom="@dimen/_2sdp"
@@ -231,7 +231,7 @@
       </LinearLayout>
 
       <androidx.recyclerview.widget.RecyclerView
-          android:id="@+id/fragment_home_rvTrending"
+          android:id="@+id/fragment_home_rvNewArriaval"
           android:layout_width="match_parent"
           android:layout_height="@dimen/_150sdp"
           android:layout_marginBottom="@dimen/_2sdp"

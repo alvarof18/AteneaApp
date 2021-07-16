@@ -54,4 +54,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     //yarolegovich - DiscreteScrollView
     implementation 'com.yarolegovich:discrete-scrollview:1.5.1'
+
+    //makeramen en el gibhub explica como usuarlo con Picasso
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 }

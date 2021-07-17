@@ -22,10 +22,7 @@ class FeedHomeFragment : BaseFragment() {
     private lateinit var rvMainCategory: RecyclerView
     private lateinit var rvTrending: RecyclerView
     private lateinit var rvNewArriaval: RecyclerView
-    private lateinit var etSearch: EditText
     private lateinit var discreteScrollView: DiscreteScrollView
-    private lateinit var tvTrendingAll: TextView
-    private lateinit var tvNewArriaval: TextView
 
     private lateinit var shopAdapter: InfiniteScrollAdapter<ShopAdapter.VHDataShop>
     private lateinit var homeMainCategoryAdapter: HomeMainCategoryAdapter

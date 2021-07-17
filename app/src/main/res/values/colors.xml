@@ -19,4 +19,8 @@
     <color name="colorBlack">#000000</color>
     <color name="tab_selected_color">#97c2c2</color>
     <color name="colorPrimary">#eaf5f5</color>
+    <color name="row_product_cart_line_color">#dfe3ee</color>
+    <color name="checkout_box_color">#e2c433</color>
+    <color name="creadicard_yello_color">#f2d548</color>
+    <color name="clothing_color_70">#70083030</color>
 </resources>

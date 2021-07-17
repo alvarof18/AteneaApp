@@ -13,6 +13,8 @@
     <string name="view_all">View All</string>
     <string name="new_arriaval">New Arrival</string>
     <string name="categories">Categories</string>
+    <string name="dolar">$</string>
+    <string name="size">Size</string>
 
     <!-- Data Test -->
 
@@ -25,5 +27,36 @@
     <string name="sub_a">Clothing Style</string>
     <string name="sub_b">Foot wear</string>
     <string name="sub_c">Accessories</string>
+
+    <string name="_7_itens_in_favoriets">7 itens in favoriets</string>
+    <string name="_8_items_added">8 items Added!</string>
+
+    <string name="your_bag">Your Bag</string>
+    <string name="your_cart_is_empty">Your cart is empty!</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="tax_9">Tax 9%</string>
+    <string name="total_items">Total items</string>
+    <string name="checkout">Checkout</string>
+
+    <string name="color_black">BLACK</string>
+    <string name="color_bron">Brown</string>
+    <string name="color_light_pink">LIGHT PINK</string>
+    <string name="color_pink_white">Pink-White</string>
+    <string name="color_yello">YELLOW</string>
+
+    <string name="size_a">XS</string>
+    <string name="size_b">X</string>
+    <string name="size_c">M</string>
+    <string name="size_d">L</string>
+    <string name="size_e">XL</string>
+    <string name="slimfit">SLIM FIT</string>
+
+    <string name="cart_a">Vero women blazer</string>
+    <string name="cart_b">Women Pink Solid Shirt Dress</string>
+    <string name="cart_c">Women Regular Shorts</string>
+    <string name="cart_d">Women Anarkali Kurta</string>
+    <string name="cart_e">Women Solid Biker Jacket</string>
+    <string name="cart_f">Printed Sheath Dress</string>
+
 
 </resources>

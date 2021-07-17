@@ -93,10 +93,11 @@ class HomeFragment : BaseFragment() {
             1 -> {
                 transaccion.replace(R.id.fragment_home_flHome,CategoryListFragment())
                 transaccion.commit()
-            }/*
-            2 -> {
-                HomeFragment().openFragment(CartListFragment())
             }
+            2 -> {
+                transaccion.replace(R.id.fragment_home_flHome,CartListFragment())
+                transaccion.commit()
+            }/*
             3 -> {
                 HomeFragment().openFragment(MyAccountFragment())
             }*/

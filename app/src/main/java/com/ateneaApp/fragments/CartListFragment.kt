@@ -1,60 +1,134 @@
 package com.ateneaApp.fragments
 
+import android.app.Activity
 import android.os.Bundle
+import android.view.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ateneaApp.R
+import com.ateneaApp.adapters.CartListAdapter
+import com.ateneaApp.data.TempListData
+import com.ateneaApp.model.CartlistModel
+import com.ateneaApp.util.Utils
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class CartListFragment : BaseFragment() {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CartListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class CartListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var cartListAdapter: CartListAdapter
+    private var productListModelArrayList = mutableListOf<CartlistModel>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var  rvProductList: RecyclerView
+    private lateinit var  tvTotalPrice: TextView
+    private lateinit var  rlEmpty: RelativeLayout
+    private lateinit var  tvCheckOut: TextView
+    private lateinit var  ivMore: ImageView
+    private lateinit var rlMore: LinearLayout
+
+    val activity:Activity = Activity()
+
+     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
-    override fun onCreateView(
+       override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart_list, container, false)
+           val layout = layoutInflater.inflate(R.layout.fragment_cart_list, container, false)
+           initComponents(layout)
+           return layout
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CartListFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CartListFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun initComponents(view: View?) {
+
+        val tvCartCount: TextView = view?.findViewById(R.id.fragment_cartlist_tvCartCount)!!
+        val tvSubTotal: TextView = view.findViewById(R.id.fragment_cartlist_tvSubTotal)
+        val tvTaxTotal: TextView = view.findViewById(R.id.fragment_cartlist_tvTax)
+
+
+        rlMore = view.findViewById(R.id.fragment_cartlist_rlMore)
+        tvCheckOut = view.findViewById(R.id.fragment_cartlist_tvCheckout)
+        rvProductList = view.findViewById(R.id.fragment_cartlist_rvProductList) !!
+        rlEmpty= view.findViewById(R.id.fragment_cartlist_rlEmpty)
+        tvTotalPrice = view.findViewById(R.id.fragment_cartlist_tvTotalPrice)
+        ivMore = view.findViewById(R.id.fragment_cartlist_ivMote)
+
+        ivMore.setOnClickListener(this)
+        tvCheckOut.setOnClickListener(this)
+        getListData()
+        tvTotalPrice.text = getString(R.string.dolar) + getTotalPrice().toString()
+        rvProductList.layoutManager = LinearLayoutManager(context)
+        rlMore.visibility = View.GONE
+
+        ivMore.setBackgroundResource(R.mipmap.ic_checkout_up)
+    }
+
+    override fun onClick(view: View?) {
+        val fa = FragmentActivity()
+        val checkOutFragmnet = CheckOutFragmnet()
+
+        if (view == tvCheckOut) {
+            Utils().addNextFragment(fa,checkOutFragmnet,this,true)
+        } else if (view != ivMore) {
+        } else {
+            if (rlMore.visibility == View.VISIBLE) {
+                rlMore.visibility = View.GONE
+                ivMore.setBackgroundResource(R.mipmap.ic_checkout_up)
+            } else {
+                rlMore.visibility = View.VISIBLE
+                ivMore.setBackgroundResource(R.mipmap.ic_checkout_down)
             }
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        val itemMenu: MenuItem = menu.findItem(R.id.menu_left)
+        itemMenu.isVisible = false
+    }
+
+    private fun getTotalPrice(): Int {
+        var total = 0
+
+        for (product in productListModelArrayList) {
+            total += product.productQuanity * product.productPrice
+        }
+        return total
+    }
+
+    private fun getListData() {
+        val activity = requireActivity()
+        productListModelArrayList = TempListData().getCartList(activity) as MutableList<CartlistModel>
+        cartListAdapter = CartListAdapter(requireContext(),productListModelArrayList,this)
+        rvProductList.adapter = cartListAdapter
+    }
+
+    fun addToCart(z: Boolean, i: Int) {
+        if (z) {
+            productListModelArrayList[i].productQuanity += 1
+        } else {
+            if (productListModelArrayList[i].productQuanity > 1){
+                productListModelArrayList[i].productQuanity -+ 1
+            }
+        }
+        cartListAdapter.notifyDataSetChanged()
+        tvTotalPrice.text = getString(R.string.dolar) + getTotalPrice().toString()
+    }
+
+    fun deleteItem(position:Int){
+        productListModelArrayList.removeAt(position)
+        cartListAdapter.notifyDataSetChanged()
+        tvTotalPrice.text = getString(R.string.dolar) + getTotalPrice().toString()
+
+        if(productListModelArrayList.size == 0){
+            rlEmpty.visibility = View.VISIBLE
+            rvProductList.visibility = View.GONE
+        }
+
     }
 }

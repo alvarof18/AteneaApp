@@ -51,7 +51,6 @@ class CategoryListFragment : BaseFragment(){
     }
 
     private fun getListData(){
-        activityf
         menuCategoryModels = TempListData().getHomeCategory(activityf)
         parentAdapter = ParentAdapter(activityf, menuCategoryModels, this)
         rvProductList.adapter = parentAdapter

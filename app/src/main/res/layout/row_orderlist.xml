@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_orderlist_cvContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/row_orderlist_ivProImg"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_similar_product_1"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="@dimen/_1sdp"
+            app:riv_corner_radius="@dimen/_10sdp"
+            app:riv_mutate_background="true"
+            app:riv_oval="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_5sdp">
+
+        <com.ateneaApp.customviews.CustomTextView
+            android:id="@+id/row_orderlist_tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCat"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="17 January"
+            android:textAllCaps="true"
+            android:textColor="@color/pin_select_bgcolor"
+            android:textSize="@dimen/_10sdp"
+            app:font_name="poppins_regular.otf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_orderlist_tvLableOrderID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_no"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_name="poppins_regular.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_orderlist_tvOrderID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_1sdp"
+                    android:text="123456"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_name="poppins_semibold.otf"
+                    android:paddingLeft="@dimen/_1sdp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_orderlist_tvLableItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_name="poppins_regular.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_orderlist_tvItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_1sdp"
+                    android:text="10"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_name="poppins_semibold.otf"
+                    android:paddingLeft="@dimen/_1sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_orderlist_tvLablePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/biil"
+                    android:textAllCaps="true"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_name="poppins_regular.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_orderlist_tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_1sdp"
+                    android:text="$64"
+                    android:textAllCaps="true"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_name="poppins_semibold.otf"
+                    android:paddingLeft="@dimen/_1sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="bottom"
+            android:layout_marginRight="@dimen/_5sdp">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_orderlist_tvOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/in_progress"
+                android:textAllCaps="true"
+                android:textColor="@color/order_status_progress_color"
+                android:textSize="@dimen/_12sdp"
+                app:font_name="poppins_semibold.otf" />
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_orderlist_tvOrderView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:drawableEnd="@mipmap/ic_arrow_blue_next"
+                android:text="@string/view"
+                android:textAllCaps="true"
+                android:textColor="@color/order_status_view_color"
+                android:textSize="@dimen/_11sdp"
+                app:font_name="poppins_medium.otf"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@mipmap/ic_arrow_blue_next" />
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

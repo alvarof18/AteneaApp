@@ -58,5 +58,43 @@
     <string name="cart_e">Women Solid Biker Jacket</string>
     <string name="cart_f">Printed Sheath Dress</string>
 
+    <string name="sign_in">Sign in</string>
+    <string name="hello">Hello</string>
+    <string name="guest">Guest</string>
+    <string name="open">Open</string>
+    <string name="my_wishlist">My Wishlist</string>
+    <string name="view_my_order">View my order</string>
 
+    <string name="locat_all_stores">Locat all stores</string>
+    <string name="change_language">Change Language</string>
+    <string name="get_support">Support</string>
+
+    <string name="settings">Setting</string>
+    <string name="my_order">My Order</string>
+    <string name="order_no">Order No</string>
+    <string name="item">Item</string>
+    <string name="biil">Bill</string>
+    <string name="in_progress">In Progress</string>
+
+    <string name="view">View</string>
+    <string name="lbl_pending">pending</string>
+    <string name="lbl_delivery">delivery</string>
+    <string name="lbl_return">return</string>
+    <string name="lbl_cancel">cancel</string>
+
+    <string name="order_details">Order Details</string>
+    <string name="shipping">Shipping</string>
+    <string name="shipped_to">shipped to</string>
+<string name="home_address">home address</string>
+    <string name="payment">payment</string>
+    <string name="by_net_banking">by net banking</string>
+
+    <string name="complite">complite</string>
+    <string name="order_made_on">order made on</string>
+    <string name="_12th_january_5_27_pm">12th january 5 27 pm</string>
+
+    <string name="delivered">delivered</string>
+    <string name="in_afternoon">in_afternoon</string>
+
+    <string name="write_your_feedback">write your feedback</string>
 </resources>

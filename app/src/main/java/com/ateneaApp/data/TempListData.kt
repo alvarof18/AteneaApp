@@ -7,6 +7,7 @@ import com.ateneaApp.R
 import com.ateneaApp.model.CartlistModel
 import com.ateneaApp.model.MenuCategoryModel
 import com.ateneaApp.model.MenuSubCategoryModel
+import com.ateneaApp.model.OrderListModel
 
 class TempListData {
 
@@ -113,6 +114,18 @@ class TempListData {
             )
         )
 
+        return arrayList
+    }
+
+    fun getOrderList(): List<OrderListModel> {
+
+        val arrayList = mutableListOf<OrderListModel>()
+        arrayList.add(OrderListModel(1321321,"Test1",R.mipmap.product_bag_1,"$10","10","12 January","28-26-2021","pending"))
+        arrayList.add(OrderListModel(1321322,"Test2",R.mipmap.product_bag_2,"$11","10","12 January","28-26-2021","cancel"))
+        arrayList.add(OrderListModel(1321323,"Test3",R.mipmap.product_bag_3,"$12","10","12 January","28-26-2021","delivery"))
+        arrayList.add(OrderListModel(1321324,"Test4",R.mipmap.product_bag_4,"$13","10","12 January","28-26-2021","return"))
+        arrayList.add(OrderListModel(1321325,"Test5",R.mipmap.product_bag_5,"$14","10","12 January","28-26-2021","delivery"))
+        arrayList.add(OrderListModel(1321326,"Test6",R.mipmap.product_bag_6,"$1","10","12 January","28-26-2021","pending"))
         return arrayList
     }
 }

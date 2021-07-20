@@ -1,14 +1,15 @@
 package com.ateneaApp.util
 
+import android.app.Activity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentTransaction
+
 import com.ateneaApp.R
 
  class Utils {
 
-    fun addNextFragment(factivity: FragmentActivity, fragment: Fragment, fragment2: Fragment, z: Boolean){
-        val transaction: FragmentTransaction = factivity.supportFragmentManager.beginTransaction()
+    fun  addNextFragment(factivity: FragmentActivity, fragment: Fragment, fragment2: Fragment, z: Boolean){
+        val transaction = factivity.supportFragmentManager.beginTransaction()
         if (z){
             transaction.setCustomAnimations(
                 R.animator.slide_fragment_vertical_right_in,

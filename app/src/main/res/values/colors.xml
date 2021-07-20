@@ -23,4 +23,22 @@
     <color name="checkout_box_color">#e2c433</color>
     <color name="creadicard_yello_color">#f2d548</color>
     <color name="clothing_color_70">#70083030</color>
+    <color name="clothing_style_color_light">#ff56a5</color>
+    <color name="clothing_style_color">#ff2088</color>
+
+    <color name="order_cancel_bgcolro">#f6eaec</color>
+    <color name="order_delivery_bgcolro">#dbf0e6</color>
+    <color name="order_pendig_bgcolro">#f6f2dc</color>
+    <color name="order_status_cancel_color">#ff4053</color>
+    <color name="order_status_deliver_color">#3ccf94</color>
+    <color name="order_status_progress_color">#0080ff</color>
+    <color name="order_status_progress_color_07">#1a0080ff</color>
+    <color name="order_status_return_color">#e5c839</color>
+    <color name="order_status_view_color">#39b0e5</color>
+
+    <color name="colorPrimary_30">#4d6acce0</color>
+    <color name="Login_title_color">#083030</color>
+
+    <color name="confirm_color">#42bbf1</color>
+
 </resources>

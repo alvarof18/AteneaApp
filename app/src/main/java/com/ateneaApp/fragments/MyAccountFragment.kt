@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import com.ateneaApp.R
 import com.ateneaApp.util.Utils
@@ -17,12 +18,12 @@ class MyAccountFragment : BaseFragment() {
     private lateinit var cvSetting: CardView
     private lateinit var cvStore: CardView
     private lateinit var cvSupport: CardView
+    private lateinit var ivProfile:ImageView
 
     private lateinit var activity:Activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        activity = AteneaAplication().activity
     }
 
     override fun initComponents(view: View?) {
@@ -31,8 +32,10 @@ class MyAccountFragment : BaseFragment() {
         cvSetting = view.findViewById(R.id.fragment_myaccount_rvSetting)
         cvStore = view.findViewById(R.id.fragment_myaccount_rvStore)
         cvSupport = view.findViewById(R.id.fragment_myaccount_rvSupport)
-        cvMyOrder.setOnClickListener(this)
 
+        ivProfile = view.findViewById(R.id.fragment_myaccount_ivProfile)
+        cvMyOrder.setOnClickListener(this)
+        ivProfile.setOnClickListener(this)
 
     }
 
@@ -49,8 +52,7 @@ class MyAccountFragment : BaseFragment() {
         super.onClick(p0)
         when (p0) {
             cvMyOrder -> {Utils().addNextFragment(requireActivity(),OrderListFragment(),this,false)}
-          //  cvStore -> {Utils().addNextFragment(requireActivity(),OrderListFragment(),this,false)}
-
+            ivProfile -> {Utils().addNextFragment(requireActivity(),MyProfileFragment(),this,false)}
         }
 
     }

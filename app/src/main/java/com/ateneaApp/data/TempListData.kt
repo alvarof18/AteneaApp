@@ -4,10 +4,7 @@ import android.app.Activity
 import android.content.res.Resources
 import androidx.fragment.app.FragmentActivity
 import com.ateneaApp.R
-import com.ateneaApp.model.CartlistModel
-import com.ateneaApp.model.MenuCategoryModel
-import com.ateneaApp.model.MenuSubCategoryModel
-import com.ateneaApp.model.OrderListModel
+import com.ateneaApp.model.*
 
 class TempListData {
 
@@ -128,4 +125,12 @@ class TempListData {
         arrayList.add(OrderListModel(1321326,"Test6",R.mipmap.product_bag_6,"$1","10","12 January","28-26-2021","pending"))
         return arrayList
     }
+
+    fun getCheckoutAddress(factivity: FragmentActivity): List<AddressListModel>{
+        val arrayList = mutableListOf<AddressListModel>()
+        arrayList.add(AddressListModel(factivity.resources.getString(R.string.add_a),"home",false))
+        arrayList.add(AddressListModel(factivity.resources.getString(R.string.add_b),"Office",false))
+        return arrayList
+    }
+
 }

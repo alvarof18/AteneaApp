@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ateneaApp.customviews.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fragment_editprofile_ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_3sdp"
+                android:src="@mipmap/ic_close" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="@string/edit_profile"
+                android:textAllCaps="false"
+                android:textColor="@color/fashion_txt_color"
+                android:textSize="@dimen/_22sdp"
+                app:font_name="poppins_bold.otf"
+                android:layout_marginLeft="@dimen/_3sdp" />
+
+            <LinearLayout
+                android:id="@+id/dailog_add_pincode_rlCurrentLocation"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_save"
+                android:gravity="center"
+                android:layout_alignParentRight="true">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/fragment_editprofile_tvSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableStart="@mipmap/ic_done_white_new"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_name="poppins_regular.otf"
+                    android:drawableLeft="@mipmap/ic_done_white_new" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fragment_editprofile_ivProfile"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@mipmap/profileimg"
+                android:visibility="gone"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp" />
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/fragment_editprofile_tvChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_current_location"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="@string/change"
+                android:textColor="@color/forgor_submit_color"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                app:font_name="nunitoextrabold.ttf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.ateneaApp.customviews.CustomEdittext
+                    android:id="@+id/fragment_editprofile_etFirstName"
+                    style="@style/ganaral_profile_edittext_style"
+                    android:hint="@string/enter_first_name"
+                    android:inputType="text"
+                    app:font_name="poppins_semibold.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    style="@style/ganaral_edittext_style"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/first_name"
+                    app:font_name="poppins_regular.otf"
+                    android:paddingLeft="@dimen/_3sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_5sdp">
+
+                <com.ateneaApp.customviews.CustomEdittext
+                    android:id="@+id/fragment_editprofile_etLastName"
+                    style="@style/ganaral_profile_edittext_style"
+                    android:hint="@string/enter_last_name"
+                    android:inputType="textEmailAddress"
+                    app:font_name="poppins_semibold.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    style="@style/ganaral_edittext_style"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/last_name"
+                    app:font_name="poppins_regular.otf"
+                    android:paddingLeft="@dimen/_3sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <com.ateneaApp.customviews.CustomEdittext
+                    android:id="@+id/fragment_editprofile_etEmail"
+                    style="@style/ganaral_profile_edittext_style"
+                    android:hint="@string/enter_your_email"
+                    android:inputType="textEmailAddress"
+                    app:font_name="poppins_semibold.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    style="@style/ganaral_edittext_style"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/email"
+                    app:font_name="nunitobold.ttf"
+                    android:paddingLeft="@dimen/_3sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <com.ateneaApp.customviews.CustomEdittext
+                    android:id="@+id/fragment_editprofile_etPhone"
+                    style="@style/ganaral_profile_edittext_style"
+                    android:hint="@string/enter_your_phone"
+                    android:inputType="text"
+                    app:font_name="poppins_semibold.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    style="@style/ganaral_edittext_style"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/phone"
+                    app:font_name="nunitobold.ttf"
+                    android:paddingLeft="@dimen/_3sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <com.ateneaApp.customviews.CustomEdittext
+                    android:id="@+id/fragment_editprofile_etGender"
+                    style="@style/ganaral_profile_edittext_style"
+                    android:hint="@string/enter_gender"
+                    android:inputType="text"
+                    app:font_name="poppins_semibold.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    style="@style/ganaral_edittext_style"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/gender"
+                    app:font_name="nunitobold.ttf"
+                    android:paddingLeft="@dimen/_3sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <com.ateneaApp.customviews.CustomEdittext
+                    android:id="@+id/fragment_editprofile_etCity"
+                    style="@style/ganaral_profile_edittext_style"
+                    android:hint="@string/enter_city_name"
+                    android:inputType="text"
+                    app:font_name="poppins_semibold.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    style="@style/ganaral_edittext_style"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/city_new"
+                    app:font_name="nunitobold.ttf"
+                    android:paddingLeft="@dimen/_3sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <com.ateneaApp.customviews.CustomEdittext
+                    android:id="@+id/fragment_editprofile_etZipcode"
+                    style="@style/ganaral_profile_edittext_style"
+                    android:hint="@string/enter_state_name"
+                    android:inputType="text"
+                    app:font_name="poppins_semibold.otf" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    style="@style/ganaral_edittext_style"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/state_new"
+                    app:font_name="nunitobold.ttf"
+                    android:paddingLeft="@dimen/_3sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.ateneaApp.customviews.SlidingLinearLayout>

@@ -26,5 +26,23 @@
         <item name="android:textColor">@color/row_view</item>
     </style>
 
+    <style name="ganaral_profile_edittext_style">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorBlack</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ganaral_edittext_style">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/login_signup_edithint_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
 
 </resources>

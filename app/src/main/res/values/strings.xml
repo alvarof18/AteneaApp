@@ -85,7 +85,7 @@
     <string name="order_details">Order Details</string>
     <string name="shipping">Shipping</string>
     <string name="shipped_to">shipped to</string>
-<string name="home_address">home address</string>
+    <string name="home_address">home address</string>
     <string name="payment">payment</string>
     <string name="by_net_banking">by net banking</string>
 
@@ -97,4 +97,41 @@
     <string name="in_afternoon">in_afternoon</string>
 
     <string name="write_your_feedback">write your feedback</string>
+    <string name="edit">edit</string>
+
+    <string name="nav_my_account">My Account</string>
+    <string name="change">Change</string>
+    <string name="addresses">addresses</string>
+    <string name="add_manage">Add/Manage</string>
+    <string name="change_password">Change Password</string>
+    <string name="clear_history">Clear History</string>
+    <string name="deactivate_account">Desactivate Account</string>
+    <string name="delivery_address">Delivery Address</string>
+
+    <string name="add_a">"Greenland Hans Egedesvej 29 P.O. Box 1615 3900 Nuuk "</string>
+    <string name="add_b">"Hans Egedesvej 29 P.O. Box 1615 3900 Nuuk Greenland"</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+
+   <string name="enter_first_name">enter first name</string>
+
+    <string name="first_name">first name</string>
+    <string name="enter_last_name">enter last name</string>
+
+    <string name="last_name">last name</string>
+
+    <string name="enter_your_email">enter your email</string>
+    <string name="email">Email</string>
+
+    <string name="enter_your_phone">enter your phone</string>
+    <string name="phone">phone</string>
+
+    <string name="enter_gender">enter gender</string>
+    <string name="gender">gender</string>
+
+    <string name="enter_city_name">enter city name</string>
+
+    <string name="city_new">city new</string>
+    <string name="enter_state_name">enter state name</string>
+    <string name="state_new">state_new</string>
 </resources>

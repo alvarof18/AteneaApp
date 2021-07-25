@@ -144,4 +144,11 @@ class TempListData {
         return arrayList
     }
 
+    fun getCreditcardList(factivity: FragmentActivity) : List<CreditcardModel>{
+        val arrayList = mutableListOf<CreditcardModel>()
+        arrayList.add(CreditcardModel("Alvaro Figueroa","Alvaro Figueroa","1234 5678 9012 4568","Gold","12/22"))
+        arrayList.add(CreditcardModel("Albanys Cuauro","Albanys Cuauro","1234 5678 9012 4568","Black","12/22"))
+        return arrayList
+    }
+
 }

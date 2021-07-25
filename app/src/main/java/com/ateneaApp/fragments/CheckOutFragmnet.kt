@@ -84,7 +84,7 @@ class CheckOutFragmnet : BaseFragment() {
                 ivFastDelivery.setBackgroundResource(R.mipmap.ic_check_pink)
             }
             ivBack ->{ requireActivity().supportFragmentManager.popBackStack()}
-       //     tvConfirmOreder -> {Utils().addNextFragment(requireActivity(), PaymentFragment(),this,false) }
+            tvConfirmOreder -> {Utils().addNextFragment(requireActivity(), PaymentFragment(),this,false) }
         }
     }
 

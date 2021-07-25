@@ -60,4 +60,12 @@
     <color name="confirm_dark">#27a5de</color>
     <color name="confirm_light">#42bbf1</color>
 
+    <color name="card_offer_color">#ff4093</color>
+
+    <color name="white_50">#80ffffff</color>
+    <color name="color_black">#000000</color>
+
+    <color name="drwable_paymetn_btn">#16c46c</color>
+    <color name="creadicard_blue_color">#2090ff</color>
+
 </resources>

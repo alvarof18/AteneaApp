@@ -113,7 +113,7 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="save">Save</string>
 
-   <string name="enter_first_name">enter first name</string>
+    <string name="enter_first_name">enter first name</string>
 
     <string name="first_name">first name</string>
     <string name="enter_last_name">enter last name</string>
@@ -147,4 +147,20 @@
     <string name="review_order">review order</string>
     <string name="modify">modify</string>
     <string name="confirm">confirm</string>
+
+    <string name="your_card">YOUR CARD</string>
+    <string name="payment_method">Payment Method</string>
+
+    <string name="get_5_off_with_buzz_credit_card">Get 5% oFF with Buzz credit card</string>
+
+    <string name="credit_debit_atm_card">Credit / Debit / ATM Card</string>
+    <string name="net_banking">Net Banking</string>
+    <string name="wallet_upi">UPI</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="process">Process</string>
+
+    <string name="visa">Visa</string>
+    <string name="signature">Signature</string>
+
+    <string name="card_number_1">1234 4567 8456 5489</string>
 </resources>

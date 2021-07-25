@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_crediview_cvContainer"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="@dimen/_120sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="@drawable/drawable_credicard_yello"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:layout_marginRight="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_crediview_tvCardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:maxLines="1"
+                android:text="@string/visa"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:font_name="poppins_regular.otf"
+                android:layout_alignParentLeft="true" />
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_crediview_tvSignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:maxLines="1"
+                android:text="@string/signature"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:font_name="poppins_light.otf"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_crediview_tvCardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxLines="1"
+                android:text="@string/card_number_1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:font_name="poppins_regular.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_crediview_tvCardOwnerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:maxLines="1"
+                android:text="Kailash"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:font_name="poppins_regular.otf"
+                android:layout_alignParentLeft="true" />
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_crediview_cvExpiredate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:maxLines="1"
+                android:text="Valid through 12/20"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:font_name="poppins_light.otf"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

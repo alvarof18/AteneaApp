@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ateneaApp.R
 import com.ateneaApp.adapters.AddressListAdapter
+import com.ateneaApp.adapters.ProfileAddressListAdapter
 import com.ateneaApp.data.TempListData
 import com.ateneaApp.model.AddressListModel
 import com.ateneaApp.util.Utils
@@ -17,7 +18,7 @@ import com.ateneaApp.util.Utils
 
 class MyProfileFragment : BaseFragment() {
 
-    private lateinit var addressListAdapterNew: AddressListAdapter
+    private lateinit var addressListAdapterNew: ProfileAddressListAdapter
     private var addressListModelNewList = mutableListOf<AddressListModel>()
     private lateinit var rvAddress: RecyclerView
 
@@ -51,7 +52,7 @@ class MyProfileFragment : BaseFragment() {
 
     private fun setAddress(){
         addressListModelNewList = TempListData().getCheckoutAddress(requireActivity()) as MutableList<AddressListModel>
-        addressListAdapterNew = AddressListAdapter(addressListModelNewList,requireContext(),this)
+        addressListAdapterNew = ProfileAddressListAdapter(addressListModelNewList)
         rvAddress.adapter = addressListAdapterNew
     }
 
@@ -60,7 +61,6 @@ class MyProfileFragment : BaseFragment() {
         when (p0){
             ivBack -> {activity?.supportFragmentManager?.popBackStack()}
             llEdit -> {Utils().addNextFragment(requireActivity(),ProfileEditFragment(),this,true)}
-
 
         }
 

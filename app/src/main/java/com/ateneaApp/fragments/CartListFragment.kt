@@ -69,11 +69,9 @@ class CartListFragment : BaseFragment() {
     }
 
     override fun onClick(view: View?) {
-        val fa = FragmentActivity()
-        val checkOutFragmnet = CheckOutFragmnet()
 
         if (view == tvCheckOut) {
-            Utils().addNextFragment(fa,checkOutFragmnet,this,true)
+            Utils().addNextFragment(requireActivity(),CheckOutFragmnet(),this,true)
         } else if (view != ivMore) {
         } else {
             if (rlMore.visibility == View.VISIBLE) {

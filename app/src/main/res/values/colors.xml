@@ -52,4 +52,12 @@
 
     <color name="login_signup_edithint_color">#802c2c4c</color>
 
+    <color name="Login_title_color_30">#4d083030</color>
+
+    <color name="delivery_txt_color">#b4c0c0</color>
+    <color name="fastdelivery_txt_color">#0055ff</color>
+
+    <color name="confirm_dark">#27a5de</color>
+    <color name="confirm_light">#42bbf1</color>
+
 </resources>

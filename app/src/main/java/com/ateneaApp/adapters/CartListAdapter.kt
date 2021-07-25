@@ -30,7 +30,7 @@ class CartListAdapter(val context: Context, val listProductCar: List<CartlistMod
 
     inner class VHDataCartList(view: View) : RecyclerView.ViewHolder(view){
 
-        private val ivDelete: CustomTextView = view.findViewById(R.id.row_cartlist_tvName)
+        private val ivDelete: ImageView = view.findViewById(R.id.row_cartlist_ivDelete)
         private val ivMinus: ImageView = view.findViewById(R.id.row_cartlist_ivMins)
         private val ivPlus: ImageView = view.findViewById(R.id.row_cartlist_ivPlus)
         private val ivProImg: ImageView = view.findViewById(R.id.row_cartlist_ivProImg)

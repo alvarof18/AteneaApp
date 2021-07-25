@@ -134,4 +134,17 @@
     <string name="city_new">city new</string>
     <string name="enter_state_name">enter state name</string>
     <string name="state_new">state_new</string>
+
+    <string name="deliver_to">deliver to</string>
+    <string name="delivery_method">delivery method</string>
+
+    <string name="standard_delivery">standard delivery</string>
+    <string name="_4_5_dayd_from_today_includiv_sat_sun">4-5 dayd from Today. \10*Includiv sat-sun</string>
+
+    <string name="free">free</string>
+    <string name="one_day_delivery">one day delivery</string>
+    <string name="fast_delivery">fast delivery </string>
+    <string name="review_order">review order</string>
+    <string name="modify">modify</string>
+    <string name="confirm">confirm</string>
 </resources>

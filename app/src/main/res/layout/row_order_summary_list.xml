@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.ateneaApp.customviews.CustomTextView
+            android:id="@+id/row_orderlist_new_tvOrederName"
+            style="@style/order_lable_style"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/row_orderlist_new_tvQuntity"
+            android:maxLines="2"
+            app:font_name="poppins_regular.otf"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/row_orderlist_new_tvQuntity" />
+
+        <com.ateneaApp.customviews.CustomTextView
+            android:id="@+id/row_orderlist_new_tvQuntity"
+            style="@style/order_lable_style"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_toStartOf="@+id/row_orderlist_new_tvPrice"
+            app:font_name="poppins_regular.otf"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_toLeftOf="@+id/row_orderlist_new_tvPrice" />
+
+        <com.ateneaApp.customviews.CustomTextView
+            android:id="@+id/row_orderlist_new_tvPrice"
+            style="@style/order_lable_style"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            app:font_name="poppins_regular.otf" />
+    </RelativeLayout>
+</LinearLayout>

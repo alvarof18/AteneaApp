@@ -133,4 +133,15 @@ class TempListData {
         return arrayList
     }
 
+    fun getOrderListNewList(factivity: FragmentActivity) : List<CheckoutListModel>{
+        val arrayList = mutableListOf<CheckoutListModel>()
+        arrayList.add(CheckoutListModel(factivity.resources.getString(R.string.cart_a),"100","1"))
+        arrayList.add(CheckoutListModel(factivity.resources.getString(R.string.cart_b),"10","3"))
+        arrayList.add(CheckoutListModel(factivity.resources.getString(R.string.cart_c),"50","2"))
+        arrayList.add(CheckoutListModel(factivity.resources.getString(R.string.cart_d),"5","1"))
+        arrayList.add(CheckoutListModel(factivity.resources.getString(R.string.cart_e),"55","1"))
+        arrayList.add(CheckoutListModel(factivity.resources.getString(R.string.cart_f),"50","2"))
+        return arrayList
+    }
+
 }

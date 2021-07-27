@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ateneaApp.customviews.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fragment_category_ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_3sdp"
+                android:src="@mipmap/ic_back_black" />
+
+            <ImageView
+                android:id="@+id/fragment_category_ivFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_3sdp"
+                android:src="@mipmap/ic_filter"
+                android:layout_alignParentRight="true" />
+
+            <com.ateneaApp.customviews.CustomEdittext
+                android:id="@+id/fragment_home_etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_toEndOf="@+id/fragment_category_ivBack"
+                android:layout_toStartOf="@+id/fragment_category_ivFilter"
+                android:background="@drawable/search_box"
+                android:drawableEnd="@mipmap/ic_search_audio"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableStart="@mipmap/ic_search"
+                android:gravity="left|center_vertical|center_horizontal|center|start"
+                android:hint="@string/search_by_keywords"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:textColorHint="@color/search_bg_hint_clor"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="visible"
+                app:font_name="poppins_light.otf"
+                android:layout_toRightOf="@+id/fragment_category_ivBack"
+                android:layout_toLeftOf="@+id/fragment_category_ivFilter"
+                android:drawableRight="@mipmap/ic_search_audio"
+                android:drawableLeft="@mipmap/ic_search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_toStartOf="@+id/dailog_add_pincode_llStyle"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="@string/women_s"
+                android:textAllCaps="false"
+                android:textColor="@color/fashion_txt_color"
+                android:textSize="@dimen/_22sdp"
+                app:font_name="poppins_bold.otf"
+                android:layout_marginLeft="@dimen/_3sdp" />
+
+            <LinearLayout
+                android:id="@+id/dailog_add_pincode_llStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_clothing_style"
+                android:gravity="center"
+                android:layout_alignParentRight="true">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/fragment_category_tvClothingStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@mipmap/ic_down_white"
+                    android:drawablePadding="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:text="@string/clothing_style"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_name="poppins_semibold.otf"
+                    android:drawableRight="@mipmap/ic_down_white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/fragment_category_tlCategory"
+                style="@style/Base.Widget.Design.TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_43sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                app:tabMinWidth="@dimen/_48sdp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/fashion_txt_color"
+                app:tabTextAppearance="@style/MidiumCustomTabText"
+                app:tabTextColor="@color/search_bg_hint_clor" />
+
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                android:id="@+id/product_picker"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:dsv_orientation="horizontal" />
+
+            <FrameLayout
+                android:id="@+id/fragment_category_flProductContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.ateneaApp.customviews.SlidingLinearLayout>

@@ -1,14 +1,388 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.ateneaApp.customviews.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ThankYouFragment">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/_90sdp"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fragment_thankyou_ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_3sdp"
+                android:src="@mipmap/ic_back_black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="@string/checkout"
+                android:textAllCaps="false"
+                android:textColor="@color/fashion_txt_color"
+                android:textSize="@dimen/_22sdp"
+                app:font_name="poppins_bold.otf"
+                android:layout_marginLeft="@dimen/_3sdp" />
+
+            <LinearLayout
+                android:id="@+id/dailog_add_pincode_rlCurrentLocation"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_pin_bg"
+                android:gravity="center"
+                android:layout_alignParentRight="true">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/fragment_home_tvPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableStart="@mipmap/ic_map_pin"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="382481"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_name="poppins_regular.otf"
+                    android:drawableLeft="@mipmap/ic_map_pin" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_240sdp"
+                android:layout_marginEnd="@dimen/_11sdp"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_50sdp"
+                            android:layout_marginStart="@dimen/_11sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:src="@drawable/drawable_desline_verticle"
+                            android:layout_marginLeft="@dimen/_11sdp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/fragment_thankyou_ivShipping"
+                                    android:layout_width="@dimen/_23sdp"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:src="@mipmap/ic_process_done" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/fragment_thankyou_ivPayment"
+                                    android:layout_width="@dimen/_23sdp"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:src="@mipmap/ic_process_done" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/fragment_thankyou_ivComplite"
+                                    android:layout_width="@dimen/_23sdp"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:src="@mipmap/ic_process_done" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_23sdp"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:src="@mipmap/ic_process_active" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_11sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_marginRight="@dimen/_11sdp"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shipping"
+                            android:textColor="@color/Login_title_color"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_name="poppins_bold.otf" />
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/your_order_will_be_shipped_to"
+                            android:textColor="@color/tab_selected_color"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_name="poppins_regular.otf" />
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_address"
+                            android:textColor="@color/tab_selected_color"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_name="poppins_regular.otf" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:id="@+id/fragment_thankyou_tvPayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:text="@string/payment"
+                            android:textColor="@color/Login_title_color"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_name="poppins_bold.otf" />
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/by_net_banking"
+                            android:textColor="@color/tab_selected_color"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_name="poppins_regular.otf" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:id="@+id/fragment_thankyou_tvComplite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:text="@string/complite"
+                            android:textColor="@color/Login_title_color"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_name="poppins_bold.otf" />
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_made_on"
+                            android:textColor="@color/tab_selected_color"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_name="poppins_regular.otf" />
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_12th_january_5_27_pm"
+                            android:textColor="@color/tab_selected_color"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_name="poppins_regular.otf" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:text="@string/order_status"
+                            android:textColor="@color/Login_title_color"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_name="poppins_bold.otf" />
+
+                        <com.ateneaApp.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shipping_is_under_process"
+                            android:textColor="@color/tab_selected_color"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_name="poppins_regular.otf" />
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@mipmap/ic_congratulation" />
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_20sdp"
+                android:text="@string/congratulations"
+                android:textAllCaps="false"
+                android:textColor="@color/pin_select_bgcolor"
+                android:textSize="@dimen/_22sdp"
+                app:font_name="poppins_medium.otf" />
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/thank_you_for_shopping_from_us"
+                android:textColor="@color/tab_selected_color"
+                android:textSize="@dimen/_11sdp"
+                app:font_name="poppins_regular.otf" />
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/_1sdp"
+                android:text="@string/your_order_will_be_delivered_by_17th_january"
+                android:textColor="@color/tab_selected_color"
+                android:textSize="@dimen/_11sdp"
+                app:font_name="poppins_regular.otf" />
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/fragment_thankyou_rlHome"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/drawable_continue"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/fragment_thankyou_tvHome"
+            android:src="@mipmap/ic_next_grey"
+            android:layout_toRightOf="@+id/fragment_thankyou_tvHome" />
+
+        <com.ateneaApp.customviews.CustomTextView
+            android:id="@+id/fragment_thankyou_tvHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingEnd="@dimen/_3sdp"
+            android:text="@string/continue_shopping"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            app:font_name="poppins_regular.otf"
+            android:paddingRight="@dimen/_3sdp" />
+    </RelativeLayout>
+</com.ateneaApp.customviews.SlidingLinearLayout>

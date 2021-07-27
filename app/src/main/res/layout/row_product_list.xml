@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_margin="@dimen/_5sdp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/row_productlist_ivProImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_2sdp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_featured_1"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="@dimen/_1sdp"
+            app:riv_corner_radius="@dimen/_10sdp"
+            app:riv_mutate_background="true"
+            app:riv_oval="false" />
+
+        <ImageView
+            android:id="@+id/row_productlist_ivLikeUnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+            android:padding="@dimen/_10sdp"
+            android:src="@mipmap/iv_favorit_on"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/row_productlist_ivAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end"
+            android:padding="@dimen/_10sdp"
+            android:src="@mipmap/iv_add_option"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/row_productlist_rlAdded"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/drawable_clothing_style"
+            android:visibility="gone">
+
+            <com.ateneaApp.customviews.CustomTextView
+                android:id="@+id/row_productlist_tvAdded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_7sdp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="visible"
+                app:font_name="nunitoextrabold.ttf"
+                android:paddingLeft="@dimen/_7sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="@dimen/_5sdp"
+                android:src="@mipmap/ic_done_white_new"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/_5sdp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/row_produclist_llBlur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/bg_addtocart"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/row_produclist_ivBlurCLose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@mipmap/ic_arrow_down" />
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_produclist_tvAddToWishlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/addcart_drawable"
+                    android:gravity="center"
+                    android:text="@string/add_to_wishlist"
+                    android:textColor="@color/row_product_add_color"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="visible"
+                    app:font_name="nunitoextrabold.ttf" />
+
+                <RelativeLayout
+                    android:id="@+id/row_produclist_rlAddToWishlistAdded"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/drawable_wishlist_added"
+                    android:visibility="gone">
+
+                    <com.ateneaApp.customviews.CustomTextView
+                        android:id="@+id/row_produclist_tvAddToWishlistAdded"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/in_wishlist"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_9sdp"
+                        android:visibility="visible"
+                        app:font_name="nunitoextrabold.ttf" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/row_produclist_tvAddToWishlistAdded"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:src="@mipmap/ic_done_wishlist"
+                        android:layout_toRightOf="@+id/row_produclist_tvAddToWishlistAdded"
+                        android:paddingLeft="@dimen/_5sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/row_produclist_rlTotalCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_27sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/row_productlist_ivMins"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/ic_mins_blur"
+                        android:layout_alignParentLeft="true" />
+
+                    <com.ateneaApp.customviews.CustomTextView
+                        android:id="@+id/row_productlist_tvQty"
+                        style="@style/order_lable_style"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:font_name="nunitobold.ttf" />
+
+                    <ImageView
+                        android:id="@+id/row_productlist_ivPlus"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/ic_plus_blur"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:id="@+id/row_produclist_tvAddToBag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/drawable_clothing_style"
+                    android:gravity="center"
+                    android:text="@string/add_to_bag"
+                    android:textColor="@color/row_product_add_color"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    app:font_name="nunitoextrabold.ttf" />
+
+                <RelativeLayout
+                    android:id="@+id/row_produclist_rlBagAdded"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/drawable_clothing_style"
+                    android:visibility="gone">
+
+                    <com.ateneaApp.customviews.CustomTextView
+                        android:id="@+id/row_produclist_tvBagAdded"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:text="@string/added"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="visible"
+                        app:font_name="nunitoextrabold.ttf"
+                        android:paddingLeft="@dimen/_15sdp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:src="@mipmap/ic_done_white_new"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="@dimen/_15sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.ateneaApp.customviews.CustomTextView
+            android:id="@+id/row_productlist_tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:padding="@dimen/_4sdp"
+            android:text="woman eats"
+            android:textColor="@color/tab_selected_color"
+            android:textSize="@dimen/_9sdp"
+            app:font_name="poppins_regular.otf"
+            android:layout_marginLeft="@dimen/_5sdp" />
+
+        <com.ateneaApp.customviews.CustomTextView
+            android:id="@+id/row_productlist_tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_4sdp"
+            android:text="$20"
+            android:textColor="@color/tab_selected_color"
+            android:textSize="@dimen/_9sdp"
+            app:font_name="poppins_regular.otf"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

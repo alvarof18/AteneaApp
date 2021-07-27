@@ -13,11 +13,12 @@ import com.ateneaApp.adapters.HomeMainCategoryAdapter
 import com.ateneaApp.adapters.NewAriiavalAdapter
 import com.ateneaApp.adapters.ShopAdapter
 import com.ateneaApp.adapters.TrendingAdapter
+import com.ateneaApp.util.Utils
 import com.yarolegovich.discretescrollview.DSVOrientation
 import com.yarolegovich.discretescrollview.DiscreteScrollView
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter
 
-class FeedHomeFragment : BaseFragment() {
+class FeedHomeFragment : BaseFragment(), HomeMainCategoryAdapter.OnItemClickListener {
 
     private lateinit var rvMainCategory: RecyclerView
     private lateinit var rvTrending: RecyclerView
@@ -84,6 +85,7 @@ class FeedHomeFragment : BaseFragment() {
         pagerImgList.add(R.mipmap.bg_home_category_44)
         pagerImgList.add(R.mipmap.bg_home_category_55)
         homeMainCategoryAdapter = HomeMainCategoryAdapter(pagerImgList, requireContext())
+        homeMainCategoryAdapter.onItemClickListener = this
         rvMainCategory.adapter = homeMainCategoryAdapter
     }
 
@@ -110,6 +112,10 @@ class FeedHomeFragment : BaseFragment() {
         pagerImgList.add(R.mipmap.bg_arriaval_3)
         newAriiavalAdapter= NewAriiavalAdapter(pagerImgList, requireContext())
         rvNewArriaval.adapter = newAriiavalAdapter
+    }
+
+    override fun onItemClick(view: View?, i: Int) {
+        Utils().addNextFragment(requireActivity(), SubCategoryFragment(), this, false);
     }
 
 }

@@ -151,4 +151,16 @@ class TempListData {
         return arrayList
     }
 
+    fun getProductList(factivity:FragmentActivity) : List<ProductListModel>{
+        val arrayList = mutableListOf<ProductListModel>()
+        arrayList.add(ProductListModel(productName=factivity.getString(R.string.product_a),productPrice="$10",productImage=R.mipmap.bg_featured_1))
+        arrayList.add(ProductListModel(productName=factivity.getString(R.string.product_b),productPrice="$8",productImage=R.mipmap.bg_featured_2))
+        arrayList.add(ProductListModel(productName=factivity.getString(R.string.product_c),productPrice="$15",productImage=R.mipmap.bg_featured_3))
+        arrayList.add(ProductListModel(productName=factivity.getString(R.string.product_d),productPrice="$12",productImage=R.mipmap.bg_featured_4))
+        arrayList.add(ProductListModel(productName=factivity.getString(R.string.product_f),productPrice="$5",productImage=R.mipmap.bg_featured_5))
+        arrayList.add(ProductListModel(productName=factivity.getString(R.string.product_g),productPrice="$15",productImage=R.mipmap.bg_featured_6))
+        arrayList.add(ProductListModel(productName=factivity.getString(R.string.product_h),productPrice="$20",productImage=R.mipmap.bg_featured_1))
+        return arrayList
+    }
+
 }

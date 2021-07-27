@@ -68,4 +68,8 @@
     <color name="drwable_paymetn_btn">#16c46c</color>
     <color name="creadicard_blue_color">#2090ff</color>
 
+    <color name="bg_transparantcolorPrimary">#d9cececd</color>
+
+    <color name="row_product_add_color">#fefefe</color>
+
 </resources>

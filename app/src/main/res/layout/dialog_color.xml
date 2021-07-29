@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ateneaApp.customviews.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_15sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/dailog_color_rlYello"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/color_yello"
+                    android:textAllCaps="true"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_name="poppins_regular.otf"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/ic_done_wishlist"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/colorPrimary_30" />
+
+            <RelativeLayout
+                android:id="@+id/dailog_color_rlLightpink"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/color_light_pink"
+                    android:textAllCaps="true"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_name="poppins_bold.otf"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:id="@+id/dailog_color_ivLightpink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/ic_done_wishlist"
+                    android:visibility="visible"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/colorPrimary_30" />
+
+            <RelativeLayout
+                android:id="@+id/dailog_color_rlPinkWhite"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/color_pink_white"
+                    android:textAllCaps="true"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_name="poppins_regular.otf"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/ic_done_wishlist"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/colorPrimary_30" />
+
+            <RelativeLayout
+                android:id="@+id/dailog_color_rlBlack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <com.ateneaApp.customviews.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/color_black"
+                    android:textAllCaps="true"
+                    android:textColor="@color/fashion_txt_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_name="poppins_regular.otf"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/ic_done_wishlist"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</com.ateneaApp.customviews.SlidingLinearLayout>

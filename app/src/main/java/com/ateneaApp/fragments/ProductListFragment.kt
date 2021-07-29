@@ -12,9 +12,10 @@ import com.ateneaApp.R
 import com.ateneaApp.adapters.ProductListAdapter
 import com.ateneaApp.data.TempListData
 import com.ateneaApp.model.ProductListModel
+import com.ateneaApp.util.Utils
 
 
-class ProductListFragment : BaseFragment() {
+class ProductListFragment : BaseFragment(), ProductListAdapter.OnItemClickListener {
 
     private lateinit var rvProductList: RecyclerView
     private lateinit var productListAdapter: ProductListAdapter
@@ -47,8 +48,8 @@ class ProductListFragment : BaseFragment() {
         productListAdapter = ProductListAdapter(productListModelArrayList,requireContext(),this)
 
         rvProductList.adapter = productListAdapter
+        productListAdapter.onItemClickListener = this
         getListDataAsyncTaskRunner().execute(*arrayOf(""))
-
     }
 
     fun addToBlur(productListModel: ProductListModel, i: Int, z: Boolean) {
@@ -84,6 +85,13 @@ class ProductListFragment : BaseFragment() {
         override fun onPostExecute(result: String?) {
             productListAdapter.addData(productListModelArrayList)
         }
+    }
+
+    override fun onItemClick(view: View, productListModel: ProductListModel) {
+        val bundle: Bundle
+        //bundle.putParcelable(this.activity.getString(C0462R.string.bdl_model), productListModel);
+        //productDetailsFragment.setArguments(bundle);
+        Utils().addNextFragmentFadeAnim(requireActivity(),ProductDetailsFragment(),this)
     }
 
 }

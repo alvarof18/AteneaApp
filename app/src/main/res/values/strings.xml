@@ -190,5 +190,17 @@
     <string name="product_g">Woman pink sild fir</string>
     <string name="product_h">Mis chase round</string>
     <string name="product_i">Mast harbour troursers</string>
+    <string name="color">color</string>
+    <string name="details">details</string>
+    <string name="loren_inpun">loren inpun</string>
+    <string name="ratting_reviews">ratting reviews</string>
+    <string name="rattings">rattings</string>
+    <string name="_75_reviews">75 reviews</string>
+    <string name="sellar_details">sellar details</string>
+    <string name="a1_fashion_store">a1 fashion store</string>
+    <string name="delivery_by_17_jan_thursday">delivery by 17 jan thursday</string>
+    <string name="view_all_sellers">view all sellers</string>
+    <string name="similar_products">similar products</string>
+    <string name="sold_by">Sold by</string>
 
 </resources>

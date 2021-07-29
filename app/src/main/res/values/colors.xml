@@ -72,4 +72,9 @@
 
     <color name="row_product_add_color">#fefefe</color>
 
+    <color name="default_line_indicator_selected_color">#ff33b5e5</color>
+    <color name="default_line_indicator_unselected_color">#ffbbbbbb</color>
+    <color name="clothing_color">#fbcad3</color>
+    <color name="colorGray">#bdbdbd</color>
+
 </resources>

@@ -2,6 +2,8 @@ package com.ateneaApp.adapters
 
 import android.content.Context
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,11 +15,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ateneaApp.R
 import com.ateneaApp.customviews.CustomTextView
 import com.ateneaApp.fragments.ProductListFragment
-import com.ateneaApp.fragments.ProductListFragment.getListDataAsyncTaskRunner
 import com.ateneaApp.model.ProductListModel
 
 
 class ProductListAdapter(var listProduct:List<ProductListModel>, val context:Context, val fragmentProducts: ProductListFragment) : RecyclerView.Adapter<ProductListAdapter.VHDataProduct>(), View.OnClickListener  {
+
+    var onItemClickListener: OnItemClickListener? = null
+
+    interface OnItemClickListener {
+        fun onItemClick(view: View, productListModel: ProductListModel)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VHDataProduct {
         val layout = LayoutInflater.from(parent.context).inflate(R.layout.row_product_list,parent,false)
@@ -31,8 +38,8 @@ class ProductListAdapter(var listProduct:List<ProductListModel>, val context:Con
 
     override fun getItemCount(): Int = listProduct.size
 
-    override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
+    override fun onClick(p0: View) {
+        Handler(Looper.getMainLooper()).postDelayed({onItemClickListener?.onItemClick(p0,p0.tag as ProductListModel)},200)
     }
 
     fun addData(list: List<ProductListModel>) {
@@ -93,6 +100,10 @@ class ProductListAdapter(var listProduct:List<ProductListModel>, val context:Con
             ivPlus.setOnClickListener{fragmentProducts.addToCart(true,position)}
             ivMins.setOnClickListener{fragmentProducts.addToCart(false,position)}
             rlAdded.setOnClickListener{fragmentProducts.addToBlur(item,position,true)}
+
+            itemView.setOnClickListener {
+                Handler(Looper.getMainLooper()).postDelayed({ onItemClickListener?.onItemClick(it,item) },200)
+            }
 
         }
 
